@@ -19,7 +19,7 @@ LONG SetRegValue(const wchar_t* path)
             if ((status = RegSetValueExA(hKey, name, 0, REG_DWORD, (BYTE*)&value, sizeof(value))) == ERROR_SUCCESS)
                 std::cout << "Value changed" << "\n";
             else
-                std::cout << "Error while changing value" << "\n";
+                std::cerr << "Error while changing value" << "\n";
         }
         RegCloseKey(hKey);
     }

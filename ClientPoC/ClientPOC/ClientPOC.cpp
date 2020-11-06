@@ -6,9 +6,9 @@ int main()
 {
     const char* path = "SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters\\FullSecureChannelProtection";
     const wchar_t* path2 = GetWC(path);
-    if (SetRegValue(path2) != 0)
+    if (SetRegValue(path2) != ERROR_SUCCESS)
     {
-        std::cout << "Couldn't change register value" << "\n";
+        std::cerr << "Couldn't change register value" << "\n";
         return -1;
     }
     SOCKET s = tcpConnect();
@@ -20,6 +20,6 @@ int main()
         WSACleanup();
     }
     else
-        std::cout << "could not connect" << "\n";
+        std::cerr << "could not connect" << "\n";
     return 0;
 }
