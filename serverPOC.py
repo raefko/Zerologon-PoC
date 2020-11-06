@@ -9,18 +9,17 @@ def recvall(clientsocket):
    while True:
       leave = True
       for i in range(2):
-         data = clientsocket.recv(20)
-         print(data)
+         data = clientsocket.recv(4096)
          if (data):
             leave = False
             break
          sleep(4)
-      if (leave and text == ""):
-         raise Exception("Disconnected")
-      if (leave and text != ""):
-         return text
       if (data):
          text += data.decode("utf-8")
+      if (leave and text == ""):
+         raise Exception("Disconnected")
+      elif (leave and text != ""):
+         return text
 
 def communicate(clientsocket, addr):
    while True:
