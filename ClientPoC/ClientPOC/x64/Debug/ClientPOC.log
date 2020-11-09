@@ -1,6 +1,6 @@
-﻿  ClientPOC.cpp
-  Note: including file: C:\Users\nabih.benazzouz\Desktop\POC\ClientPOC\ClientPOC\network.h
-  Note: including file:  C:\Users\nabih.benazzouz\Desktop\POC\ClientPOC\ClientPOC\utils.h
+﻿  network.cpp
+  Note: including file: C:\Users\nabih.benazzouz\Desktop\POC\ClientPoC\ClientPOC\network.h
+  Note: including file:  C:\Users\nabih.benazzouz\Desktop\POC\ClientPoC\ClientPOC\utils.h
   Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\WinError.h
   Note: including file:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\specstrings.h
   Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\sal.h
@@ -313,5 +313,7 @@
   Note: including file:  C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\ws2tcpip.h
   Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2ipdef.h
   Note: including file:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\in6addr.h
-  Note: including file: C:\Users\nabih.benazzouz\Desktop\POC\ClientPOC\ClientPOC\register.h
-  ClientPOC.vcxproj -> C:\Users\nabih.benazzouz\Desktop\POC\ClientPOC\x64\Debug\ClientPOC.exe
+  Note: including file: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string
+  Note: including file:  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\cctype
+C:\Users\nabih.benazzouz\Desktop\POC\ClientPoC\ClientPOC\network.cpp(38,45): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ClientPOC.vcxproj -> C:\Users\nabih.benazzouz\Desktop\POC\ClientPoC\x64\Debug\ClientPOC.exe

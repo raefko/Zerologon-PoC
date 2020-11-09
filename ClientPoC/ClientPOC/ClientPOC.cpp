@@ -15,7 +15,12 @@ int main()
     if (s)
     {
         std::cout << "connected" << "\n";
-        tcpSend("Connected", s);
+        tcpSend("CONNECTEDx", s);
+        while (tcpReceive(s) >= 0)
+        {
+            //tcpSend("CONNECTED-", s);
+            std::cout << "Waiting.." << "\n";
+        }
         closesocket(s);
         WSACleanup();
     }

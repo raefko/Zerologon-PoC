@@ -8,5 +8,6 @@
 
 SOCKET tcpConnect();
 void tcpSend(const char* str, SOCKET socket_);
+int tcpReceive(SOCKET socket_);
 
 #endif // !NETWORK_H

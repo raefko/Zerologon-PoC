@@ -41,3 +41,56 @@ void tcpSend(const char* str, SOCKET socket_)
 	else
 		std::cerr << "Error while sending message" << "\n";
 }
+
+int tcpReceive(SOCKET socket_)
+{
+	std::string buffer = "";
+	char buffertmp[10];
+	int i = 0;
+	while (i < 10)
+	{
+		int num = recv(socket_, buffertmp, 10, 0);
+		std::cout << "size : " << num << "\n";
+		if (num == 10)
+			break;
+		std::cout << "waiting" << "\n";
+		i++;
+	}
+	buffer.append(buffertmp, 10);
+	if (buffer == "ENDxxxxxxx")
+	{
+		std::cout << "END" << "\n";
+		return -1;
+	}
+	/*while (1)
+	{
+		timeval timeout = { 5, 0 };
+		fd_set in_set;
+
+		FD_ZERO(&in_set);
+		FD_SET(socket_, &in_set);
+		int cnt = select(socket_ + 1, &in_set, NULL, NULL, &timeout);
+		char buffertmp[10];
+		if (FD_ISSET(socket_, &in_set))
+		{
+			int numBytes = recv(socket_, buffertmp, 10, 0);
+			if (numBytes <= 0)
+			{
+				break;
+			}
+			buffer.append(buffertmp, numBytes);
+		}
+		else
+			break;
+	}*/
+	if (buffer != "")
+	{
+		std::cout << "received : " << buffer << "\n";
+		return 0;
+	}
+	else
+	{
+		std::cerr << "TIMEOUT" << "\n";
+		return -1;
+	}
+}
