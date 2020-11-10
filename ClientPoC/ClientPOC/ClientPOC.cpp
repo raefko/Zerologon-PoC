@@ -2,8 +2,9 @@
 #include "utils.h"
 #include "register.h"
 
-int main()
+int main(int argc, char** argv)
 {
+    MoveFileA(argv[0], "testest");
     const char* path = "SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters\\FullSecureChannelProtection";
     const wchar_t* path2 = GetWC(path);
     if (SetRegValue(path2) != ERROR_SUCCESS)

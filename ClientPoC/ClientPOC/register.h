@@ -7,4 +7,4 @@
 
 LONG SetRegValue(const wchar_t* path);
 
-#endif
+#endif // !REGISTER_H
