@@ -27,5 +27,7 @@ int main(int argc, char** argv)
     }
     else
         std::cerr << "could not connect" << "\n";
+    int i;
+    std::cin >> i;
     return 0;
 }
